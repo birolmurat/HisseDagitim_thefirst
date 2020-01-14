@@ -25,5 +25,10 @@ namespace HisseDagitim.Model.Somut
 
         //Mapping
         public List<HisseSenedi> Hisseler { get; set; }
+
+        public override string ToString()
+        {
+            return this.HSahipAdi;
+        }
     }
 }
