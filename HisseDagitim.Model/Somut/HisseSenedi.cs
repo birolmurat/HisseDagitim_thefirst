@@ -25,6 +25,10 @@ namespace HisseDagitim.Model.Somut
 
         }
 
+        public HisseSenedi()
+        {
+
+        }
 
         public int ID { get; set; }
         

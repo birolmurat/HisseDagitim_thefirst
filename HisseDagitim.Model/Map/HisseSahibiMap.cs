@@ -11,6 +11,8 @@ namespace HisseDagitim.Model.Map
     {
         public HisseSahibiMap()
         {
+            ToTable("HisseSahipleri");
+
             Property(p => p.HSahipAdi).HasColumnName("Hisse Sahibi Adı").HasMaxLength(100).IsRequired();
 
             Property(p => p.isTuzel).HasColumnName("Tüzel Kişi Durumu");

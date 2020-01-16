@@ -28,7 +28,7 @@ namespace HisseDagitim.Model.Somut
 
         public override string ToString()
         {
-            return this.HSahipAdi;
+            return HSahipAdi + " " + TCKN_VergiNo + " " + Adres + " " + Telefon + " " + Email;
         }
     }
 }

@@ -11,6 +11,8 @@ namespace HisseDagitim.Model.Map
     {
         public LogMap()
         {
+            ToTable("Logs");
+
             Property(p => p.Aciklama).HasColumnName("Açıklama").IsRequired();
         }
     }

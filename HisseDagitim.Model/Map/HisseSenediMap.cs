@@ -11,6 +11,8 @@ namespace HisseDagitim.Model.Map
     {
         public HisseSenediMap()
         {
+            ToTable("HissseSenetleri");
+
             Property(p => p.HisseYili).HasColumnName("Hisse Yılı").IsRequired();
          
             Property(p => p.isGecerli).HasColumnName("Hisse Geçerliliği").IsRequired();
