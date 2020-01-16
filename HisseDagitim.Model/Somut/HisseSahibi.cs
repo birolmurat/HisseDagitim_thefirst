@@ -24,11 +24,11 @@ namespace HisseDagitim.Model.Somut
         public bool isTuzel { get; set; } //Tüzel Kişi
 
         //Mapping
-        public List<HisseSenedi> Hisseler { get; set; }
+        public virtual List<HisseSenedi> Hisseler { get; set; }
 
-        public override string ToString()
-        {
-            return HSahipAdi + " " + TCKN_VergiNo + " " + Adres + " " + Telefon + " " + Email;
-        }
+        //public override string ToString()
+        //{
+        //    return HSahipAdi + " " + TCKN_VergiNo + " " + Adres + " " + Telefon + " " + Email;
+        //}
     }
 }

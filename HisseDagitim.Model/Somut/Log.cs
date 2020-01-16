@@ -15,6 +15,6 @@ namespace HisseDagitim.Model.Somut
 
 
         //Mapping
-        public Kullanici Kullanici { get; set; }
+        public virtual Kullanici Kullanici { get; set; }
     }
 }

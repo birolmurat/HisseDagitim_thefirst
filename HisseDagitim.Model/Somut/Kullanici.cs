@@ -17,6 +17,6 @@ namespace HisseDagitim.Model.Somut
 
 
         //Mapping
-        public List<Log> Logs { get; set; }
+        public virtual List<Log> Logs { get; set; }
     }
 }

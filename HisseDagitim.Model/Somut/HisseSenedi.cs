@@ -36,15 +36,19 @@ namespace HisseDagitim.Model.Somut
 
         public int HisseYili { get; set; }
 
-        public int[] KarDagitimPulu { get; set; }
+        public int[] KarDagitimPulu { get; set; }//10 adet kar dağıtım senesi
 
-        public int[] YeniPayPulu { get; set; }
+        public int[] DagitilanKar { get; set; }
+
+        public int[] YeniPayPulu { get; set; }//15 adet yeni pay numarası
+
+        public int[] DagitilanYeniPay { get; set; }
 
         public bool isGecerli { get; set; } //Hisse senedinin geçerliliği
 
 
 
         //Mapping
-        public HisseSahibi HisseSahibi { get; set; }
+        public virtual HisseSahibi HisseSahibi { get; set; }
     }
 }
