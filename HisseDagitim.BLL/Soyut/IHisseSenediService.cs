@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HisseDagitim.BLL.Soyut
 {
-    interface IHisseSenediService
+    public interface IHisseSenediService
     {
     }
 }
