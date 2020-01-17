@@ -9,17 +9,21 @@ using System.Threading.Tasks;
 
 namespace HisseDagitim.Model.Somut
 {
-    public class Kullanici : EntityBase,IEntity
+    public class YeniPayPulu : EntityBase,IEntity
     {
         [Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        public string KullaniciAdi { get; set; }
+        public int PulNo { get; set; }
 
-        public string Password { get; set; }
+        public bool isDagitildi { get; set; }
+
+        public decimal Carpan { get; set; }//hisse_değeri * çarpan = dağıtılan değer
 
 
         //Mapping
-        public virtual List<Log> Logs { get; set; }
+
+        public virtual HisseSenedi HisseSenedi { get; set; }
+
     }
 }

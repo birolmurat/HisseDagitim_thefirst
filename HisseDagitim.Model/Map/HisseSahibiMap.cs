@@ -13,11 +13,11 @@ namespace HisseDagitim.Model.Map
         {
             ToTable("HisseSahipleri");
 
-            Property(p => p.HSahipAdi).HasColumnName("Hisse Sahibi Adı").HasMaxLength(100).IsRequired();
+            Property(p => p.HSahipAdi).HasColumnName("Hisse Sahibi Adı").HasMaxLength(100);
 
             Property(p => p.isTuzel).HasColumnName("Tüzel Kişi Durumu");
 
-            Property(p => p.TCKN_VergiNo).HasColumnName("TCKN - Vergi No").HasMaxLength(100).IsRequired();
+            Property(p => p.TCKN_VergiNo).HasColumnName("TCKN - Vergi No").HasMaxLength(100);
 
             Property(p => p.Telefon).HasColumnName("Telefon").HasMaxLength(100);
             

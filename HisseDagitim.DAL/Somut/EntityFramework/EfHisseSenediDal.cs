@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HisseDagitim.DAL.Somut.EntityFramework
 {
-    public class EfHisseSenediDal:EfEntityDal<HisseSenedi,HisseDagitimContext>,IHisseSenediDal
+    public class EfHisseSenediDal:EfEntityDal<HisseSenedi, HisseDagitimEntities>,IHisseSenediDal
     {
     }
 }

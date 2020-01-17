@@ -53,19 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexts\EfContext\HisseDagitimContext.cs" />
+    <Compile Include="Contexts\EfContext\HisseDagitimEntities.cs" />
     <Compile Include="FakeData_Strategy\FakeData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Somut\EntityFramework\EfEntityDal.cs" />
     <Compile Include="Somut\EntityFramework\EfHisseSahibiDal.cs" />
     <Compile Include="Somut\EntityFramework\EfHisseSenediDal.cs" />
+    <Compile Include="Somut\EntityFramework\EfKarPayiPuluDal.cs" />
     <Compile Include="Somut\EntityFramework\EfKullaniciDal.cs" />
     <Compile Include="Somut\EntityFramework\EfLogDal.cs" />
+    <Compile Include="Somut\EntityFramework\EfYeniPayPuluDal.cs" />
     <Compile Include="Soyut\IEntityDal.cs" />
     <Compile Include="Soyut\IHisseSahibiDal.cs" />
     <Compile Include="Soyut\IHisseSenediDal.cs" />
+    <Compile Include="Soyut\IKarPayiPuluDal.cs" />
     <Compile Include="Soyut\IKullaniciDal.cs" />
     <Compile Include="Soyut\ILogDal.cs" />
+    <Compile Include="Soyut\IYeniPayPuluDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

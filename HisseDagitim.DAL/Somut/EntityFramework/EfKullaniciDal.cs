@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HisseDagitim.DAL.Somut.EntityFramework
 {
-    public class EfKullaniciDal:EfEntityDal<Kullanici,HisseDagitimContext>,IKullaniciDal
+    public class EfKullaniciDal:EfEntityDal<Kullanici, HisseDagitimEntities>,IKullaniciDal
     {
     }
 }

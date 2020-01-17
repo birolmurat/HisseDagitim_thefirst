@@ -13,7 +13,7 @@ namespace HisseDagitim.Model.Map
         {
             ToTable("Logs");
 
-            Property(p => p.Aciklama).HasColumnName("Açıklama").IsRequired();
+            Property(p => p.Aciklama).HasColumnName("Açıklama");
         }
     }
 }

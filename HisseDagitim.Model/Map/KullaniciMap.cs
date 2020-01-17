@@ -13,9 +13,9 @@ namespace HisseDagitim.Model.Map
         {
             ToTable("Kullanicilar");
 
-            Property(p => p.KullaniciAdi).HasColumnName("Kullanıcı Adı").HasMaxLength(50).IsRequired();
+            Property(p => p.KullaniciAdi).HasColumnName("Kullanıcı Adı").HasMaxLength(50);
 
-            Property(p => p.Password).HasColumnName("Tüzel Kişi Durumu").HasMaxLength(100).IsRequired();
+            Property(p => p.Password).HasColumnName("Tüzel Kişi Durumu").HasMaxLength(100);
         }
     }
 }

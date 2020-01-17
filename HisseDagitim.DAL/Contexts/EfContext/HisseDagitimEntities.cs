@@ -1,23 +1,20 @@
+using HisseDagitim.DAL.FakeData_Strategy;
+using HisseDagitim.Model.Map;
+using HisseDagitim.Model.Somut;
+using System;
+using System.Data.Entity;
+using System.Linq;
+
 namespace HisseDagitim.DAL.Contexts.EfContext
 {
-    using HisseDagitim.DAL.FakeData_Strategy;
-    using HisseDagitim.Model.Map;
-    using HisseDagitim.Model.Somut;
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
+    
 
-    public class HisseDagitimContext : DbContext
+    public class HisseDagitimEntities : DbContext
     {
-        // Your context has been configured to use a 'HisseDagitimContext' connection string from your application's 
-        // configuration file (App.config or Web.config). By default, this connection string targets the 
-        // 'HisseDagitim.DAL.Contexts.EfContext.HisseDagitimContext' database on your LocalDb instance. 
-        // 
-        // If you wish to target a different database and/or database provider, modify the 'HisseDagitimContext' 
-        // connection string in the application configuration file.
-        public HisseDagitimContext()
-            : base("name=HisseDagitimContext")
+      
+        public HisseDagitimEntities():base("name=HisseDagitimEntities")
         {
+             //Database.Connection.ConnectionString = "server=.;database=HisseContext;uid=sa;pwd=123";
         }
 
         public DbSet<HisseSahibi> HisseSahipleri { get; set; }
@@ -28,10 +25,14 @@ namespace HisseDagitim.DAL.Contexts.EfContext
 
         public DbSet<Log> Log { get; set; }
 
+        public DbSet<KarPayiPulu> KarPayiPullari { get; set; }
+
+        public DbSet<YeniPayPulu> YeniPayPullari { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            Database.SetInitializer<HisseDagitimContext>(new FakeData());
+            Database.SetInitializer<HisseDagitimEntities>(new FakeData());
 
 
             modelBuilder.Configurations.Add(new HisseSahibiMap());
@@ -41,6 +42,12 @@ namespace HisseDagitim.DAL.Contexts.EfContext
             modelBuilder.Configurations.Add(new KullaniciMap());
 
             modelBuilder.Configurations.Add(new LogMap());
+
+            modelBuilder.Configurations.Add(new YeniPayPuluMap());
+
+            modelBuilder.Configurations.Add(new KarPayiPuluMap());
+
+
 
 
             base.OnModelCreating(modelBuilder);

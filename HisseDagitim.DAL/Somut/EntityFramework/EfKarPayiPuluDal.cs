@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HisseDagitim.DAL.Somut.EntityFramework
 {
-    public class EfLogDal:EfEntityDal<Log, HisseDagitimEntities>,ILogDal
+    public class EfKarPayiPuluDal:EfEntityDal<KarPayiPulu, HisseDagitimEntities>,IKarPayiPuluDal
     {
     }
 }
