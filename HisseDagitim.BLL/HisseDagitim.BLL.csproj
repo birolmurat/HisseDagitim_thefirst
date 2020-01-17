@@ -42,6 +42,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Soyut\IHisseSahibiService.cs" />
+    <Compile Include="Soyut\IHisseSenediService.cs" />
+    <Compile Include="Soyut\IKarPayiPuluService.cs" />
+    <Compile Include="Soyut\IKullaniciService.cs" />
+    <Compile Include="Soyut\ILogService.cs" />
+    <Compile Include="Soyut\IYeniPayPuluService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Somut\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HisseDagitim.Model\HisseDagitim.Model.csproj">
+      <Project>{42B34F72-41B5-4696-A2BE-11064470F4E5}</Project>
+      <Name>HisseDagitim.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

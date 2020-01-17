@@ -1,4 +1,4 @@
-﻿using HisseDagitim.Model.Soyut;
+﻿ using HisseDagitim.Model.Soyut;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
