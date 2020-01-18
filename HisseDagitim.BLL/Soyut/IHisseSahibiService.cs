@@ -13,7 +13,7 @@ namespace HisseDagitim.BLL.Soyut
 
         List<HisseSahibi> GetHisseSahibiByName(string hsName);
 
-        List<HisseSahibi> GetHisseSahibiByTCKN_VergiNo(int hsTC_VN);
+        List<HisseSahibi> GetHisseSahibiByTCKN_VergiNo(string hsTC_VN);
 
         void Add(HisseSahibi hSahip);
 

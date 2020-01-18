@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HisseDagitim.Model.Somut;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,14 @@ using System.Threading.Tasks;
 
 namespace HisseDagitim.BLL.Soyut
 {
-    interface IKarPayiPuluService
+    public interface IKarPayiPuluService
     {
+        List<KarPayiPulu> GetAll();
+
+        void Add(KarPayiPulu karPayiPulu);
+
+        void Update(KarPayiPulu karPayiPulu);
+
+        void Delete(KarPayiPulu karPayiPulu);
     }
 }

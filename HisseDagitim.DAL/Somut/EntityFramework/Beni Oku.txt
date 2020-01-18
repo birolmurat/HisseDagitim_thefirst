@@ -1,0 +1,6 @@
+﻿
+
+
+
+
+Repositoryler, istenen hale göre (entity framework, nhibernate...)

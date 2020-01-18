@@ -29,9 +29,5 @@ namespace HisseDagitim.Model.Somut
         //Mapping
         public virtual List<HisseSenedi> Hisseler { get; set; }
 
-        //public override string ToString()
-        //{
-        //    return HSahipAdi + " " + TCKN_VergiNo + " " + Adres + " " + Telefon + " " + Email;
-        //}
     }
 }
