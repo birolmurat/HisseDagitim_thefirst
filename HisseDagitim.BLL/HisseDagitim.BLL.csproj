@@ -54,6 +54,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Somut\HisseSahibiManager.cs" />
     <Compile Include="Somut\HisseSenediManager.cs" />
+    <Compile Include="Somut\KarPayiPuluManager.cs" />
+    <Compile Include="Somut\KullaniciManager.cs" />
+    <Compile Include="Somut\LogManager.cs" />
+    <Compile Include="Somut\YeniPayPuluManager.cs" />
     <Compile Include="Soyut\IHisseSahibiService.cs" />
     <Compile Include="Soyut\IHisseSenediService.cs" />
     <Compile Include="Soyut\IKarPayiPuluService.cs" />

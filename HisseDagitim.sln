@@ -13,6 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HisseDagitim.BLL", "HisseDa
 		{42B34F72-41B5-4696-A2BE-11064470F4E5} = {42B34F72-41B5-4696-A2BE-11064470F4E5}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HisseDagitim.WebUI", "HisseDagitim.WebUI\HisseDagitim.WebUI.csproj", "{E3B3C385-EF3F-4447-BF94-D4E1D3D9E5DC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D3EB7304-EA45-467D-8BDE-345E75AF6D1B} = {D3EB7304-EA45-467D-8BDE-345E75AF6D1B}
+		{42B34F72-41B5-4696-A2BE-11064470F4E5} = {42B34F72-41B5-4696-A2BE-11064470F4E5}
+		{63656AC6-1EB6-4B48-8DC5-83DA0886DDD3} = {63656AC6-1EB6-4B48-8DC5-83DA0886DDD3}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +38,10 @@ Global
 		{63656AC6-1EB6-4B48-8DC5-83DA0886DDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63656AC6-1EB6-4B48-8DC5-83DA0886DDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63656AC6-1EB6-4B48-8DC5-83DA0886DDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B3C385-EF3F-4447-BF94-D4E1D3D9E5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B3C385-EF3F-4447-BF94-D4E1D3D9E5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B3C385-EF3F-4447-BF94-D4E1D3D9E5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B3C385-EF3F-4447-BF94-D4E1D3D9E5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
