@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HisseDagitim.WebUI")]
+[assembly: AssemblyTitle("HisseDagitim.WebUI.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HisseDagitim.WebUI")]
+[assembly: AssemblyProduct("HisseDagitim.WebUI.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("58ab3871-4933-4122-ba32-ad29aaf3341b")]
+[assembly: Guid("74e85f48-c88f-4a60-9270-3da5349665d3")]
 
 // Version information for an assembly consists of the following four values:
 //
