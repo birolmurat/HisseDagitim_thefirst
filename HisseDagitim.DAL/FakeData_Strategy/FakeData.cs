@@ -11,7 +11,7 @@ namespace HisseDagitim.DAL.FakeData_Strategy
 {
     public class FakeData:DropCreateDatabaseIfModelChanges<HisseDagitimEntities>
     {
-        protected override void Seed(HisseDagitimEntities context)//fake data buraya girilecek
+        protected override void Seed(HisseDagitimEntities context)//fake data buraya girilece
         {
 
 			var hsahips = new List<HisseSahibi>//excel magic
