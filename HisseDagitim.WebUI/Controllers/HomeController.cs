@@ -1,5 +1,6 @@
 ﻿using HisseDagitim.BLL.DependencyResolvers.Ninject;
 using HisseDagitim.BLL.Soyut;
+using HisseDagitim.Model.Somut;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace HisseDagitim.WebUI.Controllers
     public class HomeController : Controller
     {
         private IHisseSahibiService _hsahipService;
+        private IKullaniciService _kullaniciService;
         //[Authorize]
         public ActionResult Index()
         {
@@ -19,14 +21,28 @@ namespace HisseDagitim.WebUI.Controllers
 
             return View(model);
         }
-
-        public ActionResult About()
+        public ActionResult Login()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Login(Kullanici kullanici)
+        {
+            _kullaniciService = InstanceFactory.GetInstance<IKullaniciService>();
+            var model = _kullaniciService.GetAll();
+            if (_kullaniciService.GetAll().Any(x => x.KullaniciAdi == kullanici.KullaniciAdi && x.Password == kullanici.Password))
+            {
+                Kullanici girisYapan = _kullaniciService.GetAll().FirstOrDefault(x => x.KullaniciAdi == kullanici.KullaniciAdi);
+                Session["user"] = girisYapan;
+                return View();
+            }
+            else
+            {
+                ViewBag.Message = "Kullanıcı Bulunamadı";
+                return View();
+            }
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

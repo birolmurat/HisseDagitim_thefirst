@@ -4,32 +4,42 @@
 }
 
 <div class="jumbotron">
-    <h1>Hisse Dağıtım Proğramı</h1>
+    <h2>Hisse Dağıtım Proğramı</h2>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@*>Arama ekranı
+    Hisse sahibi arama olacak, hisse sahibi seçilince, seçilen kişinin hisseleri ekrana gelecek.
+    kişiye ait hisselerin işlemi burda yapılacak
 
-<h2> Hisse Sahibi Listesi </h2>
+    örnek: ahmet aratılır, ahmetin hisseleri ekrana gelir. Ahmetin hisseleri üzerinde kar dağıtımı, yeni pay dağıtımı yapılır
+    Kar dağıtımı: sene seçilir, çarpan belirlenir, işlendi diye işaretlenir.
+    hisse blokajı: seçilen senedin bool geçerlimi boolu false'a çekilir.
+
+    kar dağıt->kişi seç->senet seç->kar dağıtım pulu senesi seç->isDagitildi==false ise dağıtma işlemini yap->çarpan belirle->kar dağıt butotnuna bas->isDagitildi true olsun
+          
+
+
+    Hisse senedi işlemlerinde birden fazla hisseye işlem yapılacak.
+    Örnek: belli bir tertip numarasına ait tüm hisselerin blokajı
+    yeni hisse senedi oluşturma olacak
+    yeni tertip numaralı hisseler oluşturma: senetlerin senesi seçilir(şu an bulunulan sene), sonra seneye ait daha önce oluşturulan tertip numarası varsa bu numara bir artırılır ve herkesin hisse değeri kadar yeni senetler oluşturulur
+
+
+    örnek:
+    sene:2020
+    tertip no:1
+    hisse oluştur->herkese oluştur-> herkese yeni hisse senedi oluşturulur
+
+
+    *@
+
+
+
+
+@* Sonuç ekranı *@
+
+
+<h3> Hisse Sahibi Listesi </h3>
 
 <ul class="list-group" >
     @foreach (var hsahip in Model)
