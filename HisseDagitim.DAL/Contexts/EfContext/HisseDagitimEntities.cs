@@ -14,7 +14,7 @@ namespace HisseDagitim.DAL.Contexts.EfContext
       
         public HisseDagitimEntities():base("name=HisseDagitimEntities")
         {
-             //Database.Connection.ConnectionString = "server=.;database=HisseContext;uid=sa;pwd=123";
+             Database.Connection.ConnectionString = "server=.;database=HisseContext;uid=sa;pwd=123";
         }
 
         public DbSet<HisseSahibi> HisseSahipleri { get; set; }

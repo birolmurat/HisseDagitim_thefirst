@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HisseDagitim.BLL.DependencyResolvers.Ninject;
+using HisseDagitim.BLL.Soyut;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,14 @@ namespace HisseDagitim.WebUI.Controllers
 {
     public class HomeController : Controller
     {
+        private IHisseSahibiService _hsahipService;
         //[Authorize]
         public ActionResult Index()
         {
-            return View();
+            _hsahipService = InstanceFactory.GetInstance<IHisseSahibiService>();
+            var model = _hsahipService.GetAll();
+
+            return View(model);
         }
 
         public ActionResult About()
@@ -27,5 +33,6 @@ namespace HisseDagitim.WebUI.Controllers
 
             return View();
         }
+
     }
 }
