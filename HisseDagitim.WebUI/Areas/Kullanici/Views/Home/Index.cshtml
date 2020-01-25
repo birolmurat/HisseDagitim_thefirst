@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Kullanici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Deneme Autofill</h2>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.22/jquery-ui.js"></script>
+<link rel="Stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/redmond/jquery-ui.css" />
+<script>
+    $(function () {
+        $("#textautofillhere").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Kullanici/Home/AutoFillHere",
+                    data: "{'afill_t':'" + request.term + "'}",
+                    datatype: "json",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return item;
+                        }))
+                    },
+                });
+                
+            },
+            minLength:1
+        });
+        
+    });
+</script>
+
+<input type="text" id="textautofillhere" name="afill_t" />

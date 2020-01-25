@@ -34,8 +34,8 @@ namespace HisseDagitim.WebUI.Controllers
             if (_kullaniciService.GetAll().Any(x => x.KullaniciAdi == kullanici.KullaniciAdi && x.Password == kullanici.Password))
             {
                 Kullanici girisYapan = _kullaniciService.GetAll().FirstOrDefault(x => x.KullaniciAdi == kullanici.KullaniciAdi);
-                Session["user"] = girisYapan;
-                return View();
+                Session["kullanici"] = girisYapan;
+                return RedirectToAction("Index", "Home", new { area = "Kullanici" });
             }
             else
             {

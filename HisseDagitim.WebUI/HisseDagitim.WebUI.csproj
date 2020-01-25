@@ -127,7 +127,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Kullanici\Controllers\HomeController.cs" />
     <Compile Include="Areas\Kullanici\KullaniciAreaRegistration.cs" />
+    <Compile Include="AuthFilters\KullaniciAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,6 +148,9 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Kullanici\Views\web.config" />
+    <Content Include="Areas\Kullanici\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Kullanici\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Kullanici\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -175,9 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Kullanici\Controllers\" />
     <Folder Include="Areas\Kullanici\Data\" />
-    <Folder Include="Areas\Kullanici\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
