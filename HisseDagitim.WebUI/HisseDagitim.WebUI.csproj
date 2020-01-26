@@ -127,7 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Kullanici\Controllers\HisseSahibiIslemleriController.cs" />
+    <Compile Include="Areas\Kullanici\Controllers\HisseSenediIslemleriController.cs" />
     <Compile Include="Areas\Kullanici\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Kullanici\Controllers\KullaniciController.cs" />
+    <Compile Include="Areas\Kullanici\Controllers\PayDagitimController.cs" />
     <Compile Include="Areas\Kullanici\KullaniciAreaRegistration.cs" />
     <Compile Include="AuthFilters\KullaniciAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -151,6 +155,11 @@
     <Content Include="Areas\Kullanici\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Kullanici\Views\Shared\Error.cshtml" />
     <Content Include="Areas\Kullanici\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Kullanici\Views\HisseSahibiIslemleri\HSahipIslemleri.cshtml" />
+    <Content Include="Areas\Kullanici\Views\Shared\_mainLayout.cshtml" />
+    <Content Include="Areas\Kullanici\Views\HisseSenediIslemleri\Index.cshtml" />
+    <Content Include="Areas\Kullanici\Views\Kullanici\Index.cshtml" />
+    <Content Include="Areas\Kullanici\Views\PayDagitim\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -173,8 +182,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Areas\Kullanici\Views\Home\About.cshtml" />
+    <Content Include="Areas\Kullanici\Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>

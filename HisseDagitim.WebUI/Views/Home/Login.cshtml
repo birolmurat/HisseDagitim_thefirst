@@ -7,7 +7,7 @@
         <h2 class="form-signin-heading">Giriş Yap</h2>
         <div class="login-wrap">
             @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control", @placeholder = "UserName" })
-            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @placeholder = "Password" })
+            @Html.PasswordFor(x => x.Password, new { @class = "form-control", @placeholder = "Password" })
             
             <button class="btn-default" type="submit">Giriş Yap</button>
         </div>
