@@ -11,6 +11,8 @@ namespace HisseDagitim.BLL.Soyut
     {
         List<KarPayiPulu> GetAll();
 
+        KarPayiPulu GetKarPayi(int id);
+
         void Add(KarPayiPulu karPayiPulu);
 
         void Update(KarPayiPulu karPayiPulu);

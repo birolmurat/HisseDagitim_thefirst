@@ -21,6 +21,10 @@ namespace HisseDagitim.BLL.Soyut
 
         HisseSenedi Get(int hSenetID);
 
+        HisseSenedi GetHisse(int yil, int hisseSahibiId, int tertip, int hisseNo);
+
+        HisseSenedi GetLastHisse();
+
         void Add(HisseSenedi hSenedi);
 
         void Update(HisseSenedi hSenedi);

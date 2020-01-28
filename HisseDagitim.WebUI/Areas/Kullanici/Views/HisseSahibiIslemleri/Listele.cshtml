@@ -1,0 +1,53 @@
+﻿@model List<HisseDagitim.Model.Somut.HisseSahibi>
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Areas/Kullanici/Views/Shared/_mainLayout.cshtml";
+}
+
+<h2>Listele</h2>
+
+@(Html.BeginForm("Duzenle", "HisseSahibiIslemleri"))
+{
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td><b>Hisse Sahipleri</b></td>
+                        <td><b>TCKN - Vergi No</b></td>
+                        <td><b>Hisseler</b></td>
+                        <td><b>Telefon</b></td>
+                        <td><b>E-Mail</b></td>
+                        <td><b>Adres</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var hs in Model)
+                    {
+
+                        <tr>
+                            <td>@hs.HSahipAdi</td>
+                            <td>@hs.TCKN_VergiNo</td>
+
+                            <td>
+                                @foreach (var hsenet in hs.Hisseler)
+                                {
+                                    @(hsenet.HisseDegeri.ToString() + " Tertip:" + hsenet.HisseTertipNo.ToString()) <br />
+                                }
+                            </td>
+                            <td>@hs.Telefon</td>
+                            <td>@hs.Email</td>
+                            <td>@hs.Adres</td>
+                            <td>
+                                <input type="submit" value="Hisse Sahibini Seç" class="btn-default">
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+}

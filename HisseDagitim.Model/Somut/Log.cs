@@ -11,13 +11,16 @@ namespace HisseDagitim.Model.Somut
 {
     public class Log : EntityBase,IEntity
     {
-        [Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         public string Aciklama { get; set; }
 
 
         //Mapping
+
+        public int KullaniciID { get; set; }
+
         public virtual Kullanici Kullanici { get; set; }
     }
 }

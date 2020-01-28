@@ -23,6 +23,8 @@ namespace HisseDagitim.Model.Somut
 
         //Mapping
 
+        public int HisseSenediID { get; set; }
+
         public virtual HisseSenedi HisseSenedi { get; set; }
 
     }

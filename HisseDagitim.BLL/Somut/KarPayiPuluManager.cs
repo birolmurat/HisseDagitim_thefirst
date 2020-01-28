@@ -40,6 +40,12 @@ namespace HisseDagitim.BLL.Somut
             return _karPayiPuluDal.GetAll();
         }
 
+        public KarPayiPulu GetKarPayi(int id)
+        {
+            return _karPayiPuluDal.Get(p => p.ID == id);
+
+        }
+
         public void Update(KarPayiPulu karPayiPulu)
         {
             _karPayiPuluDal.Update(karPayiPulu);

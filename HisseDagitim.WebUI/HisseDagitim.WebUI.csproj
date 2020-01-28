@@ -160,6 +160,8 @@
     <Content Include="Areas\Kullanici\Views\HisseSenediIslemleri\Index.cshtml" />
     <Content Include="Areas\Kullanici\Views\Kullanici\Index.cshtml" />
     <Content Include="Areas\Kullanici\Views\PayDagitim\Index.cshtml" />
+    <Content Include="Areas\Kullanici\Views\HisseSahibiIslemleri\Listele.cshtml" />
+    <Content Include="Areas\Kullanici\Views\HisseSahibiIslemleri\Duzenle.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -27,7 +27,15 @@ namespace HisseDagitim.Model.Somut
         public bool isTuzel { get; set; } //Tüzel Kişi
 
         //Mapping
+
+
+
         public virtual List<HisseSenedi> Hisseler { get; set; }
+
+        public override string ToString()
+        {
+            return HSahipAdi;
+        }
 
     }
 }

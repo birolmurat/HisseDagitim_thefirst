@@ -41,6 +41,11 @@ namespace HisseDagitim.BLL.Somut
             return _yeniPayPuluDal.GetAll();
         }
 
+        public YeniPayPulu GetYeniPay(int id)
+        {
+            return _yeniPayPuluDal.Get(p => p.ID == id);
+        }
+
         public void Update(YeniPayPulu yeniPayPulu)
         {
             _yeniPayPuluDal.Update(yeniPayPulu);

@@ -10,6 +10,8 @@ namespace HisseDagitim.BLL.Soyut
     public interface IKullaniciService
     {
         List<Kullanici> GetAll();
+
+        Kullanici GetKullanici(string kAdi, string kPassword);
         
         void Add(Kullanici kullanici);
 

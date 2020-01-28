@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<HisseDagitim.Model.Somut.HisseSahibi>
 @{
     ViewBag.Title = "Hisse Sahibi Islemleri";
     Layout = "~/Areas/Kullanici/Views/Shared/_Layout.cshtml";
@@ -35,5 +35,7 @@
 
 
 <input type="text" id="textautofillhere" name="afill_t" />
-<button type="button">Hisse Sahibi Seç</button>
+<button type="button" class="btn-default" onclick="location.href='@Url.Action("Duzenle","HisseSahibiIslemleri")">Hisse Sahibi Seç</button>
+<button type="button" class="btn-default" onclick="location.href='@Url.Action("Listele","HisseSahibiIslemleri")'">Tüm Hisse Sahiplerini Listele</button>
+<br />
 

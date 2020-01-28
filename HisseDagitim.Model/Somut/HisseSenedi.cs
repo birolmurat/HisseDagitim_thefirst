@@ -31,6 +31,10 @@ namespace HisseDagitim.Model.Somut
 
 
         //Mapping
+
+        public int HisseSahibiID { get; set; }
+
+
         public virtual HisseSahibi HisseSahibi { get; set; }
 
         public virtual List<KarPayiPulu> KarPayiPullari { get; set; }

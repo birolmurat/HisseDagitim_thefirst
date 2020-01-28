@@ -11,6 +11,8 @@ namespace HisseDagitim.BLL.Soyut
     {
         List<YeniPayPulu> GetAll();
 
+        YeniPayPulu GetYeniPay(int id);
+
         void Add(YeniPayPulu yeniPayPulu);
 
         void Update(YeniPayPulu yeniPayPulu);

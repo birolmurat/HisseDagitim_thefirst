@@ -52,6 +52,11 @@ namespace HisseDagitim.BLL.Somut
             return _hisseSenediDal.GetAll(p=>p.isGecerli == true) ;
         }
 
+        public HisseSenedi GetHisse(int yil, int hisseSahibiId, int tertip, int hisseNo)
+        {
+            return _hisseSenediDal.Get(p=>p.HisseYili == yil && p.HisseSahibiID == hisseSahibiId && p.HisseTertipNo == tertip && p.HisseNo == hisseNo);
+        }
+
         public List<HisseSenedi> GetHisseSenediByHisseNo(int hNo)
         {
             if (!string.IsNullOrEmpty(hNo.ToString()))
@@ -79,6 +84,11 @@ namespace HisseDagitim.BLL.Somut
             {
                 return GetAll();
             }
+        }
+
+        public HisseSenedi GetLastHisse()
+        {
+            return _hisseSenediDal.GetAll().Last();
         }
 
         public void Update(HisseSenedi hSenedi)

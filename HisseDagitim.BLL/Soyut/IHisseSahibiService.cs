@@ -20,5 +20,7 @@ namespace HisseDagitim.BLL.Soyut
         void Update(HisseSahibi hSahip);
 
         void Delete(HisseSahibi hSahip);
+
+        HisseSahibi GetSahibi(string hsName);
     }
 }

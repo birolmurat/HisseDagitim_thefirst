@@ -40,6 +40,11 @@ namespace HisseDagitim.BLL.Somut
             return _kullaniciDal.GetAll();
         }
 
+        public Kullanici GetKullanici(string kAdi, string kPassword)
+        {
+            return _kullaniciDal.Get(p => p.KullaniciAdi == kAdi && p.Password == kPassword);
+        }
+
         public void Update(Kullanici kullanici)
         {
             _kullaniciDal.Update(kullanici);

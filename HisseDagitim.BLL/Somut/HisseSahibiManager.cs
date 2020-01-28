@@ -65,6 +65,11 @@ namespace HisseDagitim.BLL.Somut
             }
         }
 
+        public HisseSahibi GetSahibi(string hsName)
+        {
+            return _hisseSahibiDal.Get(p => p.HSahipAdi == hsName);
+        }
+
         public void Update(HisseSahibi hSahip)
         {
             _hisseSahibiDal.Update(hSahip);

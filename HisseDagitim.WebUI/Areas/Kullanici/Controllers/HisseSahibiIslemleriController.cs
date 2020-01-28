@@ -1,5 +1,6 @@
 ﻿using HisseDagitim.BLL.DependencyResolvers.Ninject;
 using HisseDagitim.BLL.Soyut;
+using HisseDagitim.Model.Somut;
 using HisseDagitim.WebUI.AuthFilters;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,20 @@ namespace HisseDagitim.WebUI.Areas.Kullanici.Controllers
         // GET: Kullanici/HisseSahibiIslemleri
         public ActionResult HSahipIslemleri()
         {
-            return View();
+            var model = _hSahipService.GetAll();
+            return View(model);
+        }
+
+        public ActionResult Listele()
+        {
+            var model = _hSahipService.GetAll();
+            return View(model);
+        }
+
+        public ActionResult Duzenle(HisseSahibi hsahip)
+        {
+            var model = hsahip;
+            return View(model);
         }
 
         [HttpPost]
