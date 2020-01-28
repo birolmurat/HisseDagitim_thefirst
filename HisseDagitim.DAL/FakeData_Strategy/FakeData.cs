@@ -52,7 +52,7 @@ namespace HisseDagitim.DAL.FakeData_Strategy
 			}
 			context.SaveChanges();
 			
-			new List<HisseSenedi>
+			var hissesenets = new List<HisseSenedi>
 			{
 				new HisseSenedi{ HisseDegeri =  3.13m   , HisseYili = 2012, isGecerli =         true    , HisseSahibi = hsahips.Single(p=>p.ID ==   1   ), HisseNo =    1   , HisseTertipNo =   1   },
 				new HisseSenedi{ HisseDegeri =  3m      , HisseYili = 2012, isGecerli =         true    , HisseSahibi = hsahips.Single(p=>p.ID ==   2   ), HisseNo =    2   , HisseTertipNo =   1   },
@@ -87,8 +87,28 @@ namespace HisseDagitim.DAL.FakeData_Strategy
 				new HisseSenedi{ HisseDegeri =  2.91m   , HisseYili = 2012, isGecerli =         true    , HisseSahibi = hsahips.Single(p=>p.ID ==   3   ), HisseNo =    31  , HisseTertipNo =   1   },
 				new HisseSenedi{ HisseDegeri =  2.75m   , HisseYili = 2012, isGecerli =         true    , HisseSahibi = hsahips.Single(p=>p.ID ==   4   ), HisseNo =    32  , HisseTertipNo =   1   },
 				new HisseSenedi{ HisseDegeri =  2.96m   , HisseYili = 2012, isGecerli =         true    , HisseSahibi = hsahips.Single(p=>p.ID ==   5   ), HisseNo =    33  , HisseTertipNo =   1   }
-			}.ForEach( a => context.HisseSenetleri.Add(a));
+			};//.ForEach(a => context.HisseSenetleri.Add(a));
 
+			foreach (var senet in hissesenets)
+			{
+				context.HisseSenetleri.Add(senet);
+			}
+
+			context.SaveChanges();
+
+			List<decimal> sums = new List<decimal>();
+
+			foreach (var sahibis in context.HisseSahipleri)
+			{
+				decimal sumHisse = 0m;
+				foreach (var hisses in sahibis.Hisseler)
+				{
+					sumHisse += hisses.HisseDegeri;
+				}
+				sahibis.ToplamHisseDegeri = sumHisse;
+
+			}
+			
 			context.SaveChanges();
 
 			foreach (var item in context.HisseSenetleri)

@@ -19,12 +19,16 @@ namespace HisseDagitim.Model.Somut
         public string TCKN_VergiNo { get; set; }
 
         public string Adres { get; set; }
-
+        
         public string Telefon { get; set; }
 
         public string Email { get; set; }
 
         public bool isTuzel { get; set; } //Tüzel Kişi
+
+        public decimal ToplamHisseDegeri { get; set; }
+
+
 
         //Mapping
 

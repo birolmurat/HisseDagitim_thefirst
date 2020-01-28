@@ -39,26 +39,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnYeniHisseOlustur = new System.Windows.Forms.Button();
-            this.btnTopleSilme = new System.Windows.Forms.Button();
             this.btnBlokaj = new System.Windows.Forms.Button();
-            this.btnHisseleriGetir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nudYeniHisseYil = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudBloksilYil = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.nudYeniHisseTertip = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.nudBloksilTertip = new System.Windows.Forms.NumericUpDown();
+            this.btnTopluSil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTertipNoAra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHisseYiliAra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwHisseView)).BeginInit();
             this.gbxTopluIslem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudYeniHisseYil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBloksilYil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudYeniHisseTertip)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBloksilTertip)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -140,20 +139,19 @@
             this.gbxTopluIslem.Controls.Add(this.label9);
             this.gbxTopluIslem.Controls.Add(this.label8);
             this.gbxTopluIslem.Controls.Add(this.btnYeniHisseOlustur);
-            this.gbxTopluIslem.Controls.Add(this.btnTopleSilme);
+            this.gbxTopluIslem.Controls.Add(this.btnTopluSil);
             this.gbxTopluIslem.Controls.Add(this.btnBlokaj);
-            this.gbxTopluIslem.Controls.Add(this.btnHisseleriGetir);
             this.gbxTopluIslem.Controls.Add(this.label7);
             this.gbxTopluIslem.Controls.Add(this.label4);
             this.gbxTopluIslem.Controls.Add(this.nudYeniHisseYil);
-            this.gbxTopluIslem.Controls.Add(this.numericUpDown1);
+            this.gbxTopluIslem.Controls.Add(this.nudBloksilYil);
             this.gbxTopluIslem.Controls.Add(this.label6);
             this.gbxTopluIslem.Controls.Add(this.label5);
             this.gbxTopluIslem.Controls.Add(this.nudYeniHisseTertip);
-            this.gbxTopluIslem.Controls.Add(this.numericUpDown2);
+            this.gbxTopluIslem.Controls.Add(this.nudBloksilTertip);
             this.gbxTopluIslem.Location = new System.Drawing.Point(12, 131);
             this.gbxTopluIslem.Name = "gbxTopluIslem";
-            this.gbxTopluIslem.Size = new System.Drawing.Size(304, 297);
+            this.gbxTopluIslem.Size = new System.Drawing.Size(304, 279);
             this.gbxTopluIslem.TabIndex = 2;
             this.gbxTopluIslem.TabStop = false;
             this.gbxTopluIslem.Text = "Toplu Hisse İşlemleri";
@@ -161,7 +159,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(92, 194);
+            this.label9.Location = new System.Drawing.Point(94, 167);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 13);
             this.label9.TabIndex = 4;
@@ -178,44 +176,28 @@
             // 
             // btnYeniHisseOlustur
             // 
-            this.btnYeniHisseOlustur.Location = new System.Drawing.Point(71, 262);
+            this.btnYeniHisseOlustur.Location = new System.Drawing.Point(71, 244);
             this.btnYeniHisseOlustur.Name = "btnYeniHisseOlustur";
             this.btnYeniHisseOlustur.Size = new System.Drawing.Size(136, 23);
             this.btnYeniHisseOlustur.TabIndex = 3;
             this.btnYeniHisseOlustur.Text = "Hisseleri Oluştur";
             this.btnYeniHisseOlustur.UseVisualStyleBackColor = true;
-            // 
-            // btnTopleSilme
-            // 
-            this.btnTopleSilme.Location = new System.Drawing.Point(71, 148);
-            this.btnTopleSilme.Name = "btnTopleSilme";
-            this.btnTopleSilme.Size = new System.Drawing.Size(136, 23);
-            this.btnTopleSilme.TabIndex = 3;
-            this.btnTopleSilme.Text = "Hisseleri Sil";
-            this.btnTopleSilme.UseVisualStyleBackColor = true;
+            this.btnYeniHisseOlustur.Click += new System.EventHandler(this.btnYeniHisseOlustur_Click);
             // 
             // btnBlokaj
             // 
-            this.btnBlokaj.Location = new System.Drawing.Point(71, 119);
+            this.btnBlokaj.Location = new System.Drawing.Point(71, 90);
             this.btnBlokaj.Name = "btnBlokaj";
             this.btnBlokaj.Size = new System.Drawing.Size(136, 23);
             this.btnBlokaj.TabIndex = 3;
             this.btnBlokaj.Text = "Hisseleri Bloke Et";
             this.btnBlokaj.UseVisualStyleBackColor = true;
-            // 
-            // btnHisseleriGetir
-            // 
-            this.btnHisseleriGetir.Location = new System.Drawing.Point(71, 90);
-            this.btnHisseleriGetir.Name = "btnHisseleriGetir";
-            this.btnHisseleriGetir.Size = new System.Drawing.Size(136, 23);
-            this.btnHisseleriGetir.TabIndex = 3;
-            this.btnHisseleriGetir.Text = "Hisseleri Getir";
-            this.btnHisseleriGetir.UseVisualStyleBackColor = true;
+            this.btnBlokaj.Click += new System.EventHandler(this.btnBlokaj_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 212);
+            this.label7.Location = new System.Drawing.Point(6, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 1;
@@ -232,7 +214,7 @@
             // 
             // nudYeniHisseYil
             // 
-            this.nudYeniHisseYil.Location = new System.Drawing.Point(178, 210);
+            this.nudYeniHisseYil.Location = new System.Drawing.Point(178, 192);
             this.nudYeniHisseYil.Maximum = new decimal(new int[] {
             20000,
             0,
@@ -242,22 +224,23 @@
             this.nudYeniHisseYil.Size = new System.Drawing.Size(120, 20);
             this.nudYeniHisseYil.TabIndex = 2;
             // 
-            // numericUpDown1
+            // nudBloksilYil
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(178, 38);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudBloksilYil.Enabled = false;
+            this.nudBloksilYil.Location = new System.Drawing.Point(178, 38);
+            this.nudBloksilYil.Maximum = new decimal(new int[] {
             20000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 2;
+            this.nudBloksilYil.Name = "nudBloksilYil";
+            this.nudBloksilYil.Size = new System.Drawing.Size(120, 20);
+            this.nudBloksilYil.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 238);
+            this.label6.Location = new System.Drawing.Point(6, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 1;
@@ -274,17 +257,28 @@
             // 
             // nudYeniHisseTertip
             // 
-            this.nudYeniHisseTertip.Location = new System.Drawing.Point(178, 236);
+            this.nudYeniHisseTertip.Location = new System.Drawing.Point(178, 218);
             this.nudYeniHisseTertip.Name = "nudYeniHisseTertip";
             this.nudYeniHisseTertip.Size = new System.Drawing.Size(120, 20);
             this.nudYeniHisseTertip.TabIndex = 2;
             // 
-            // numericUpDown2
+            // nudBloksilTertip
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(178, 64);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 2;
+            this.nudBloksilTertip.Enabled = false;
+            this.nudBloksilTertip.Location = new System.Drawing.Point(178, 64);
+            this.nudBloksilTertip.Name = "nudBloksilTertip";
+            this.nudBloksilTertip.Size = new System.Drawing.Size(120, 20);
+            this.nudBloksilTertip.TabIndex = 2;
+            // 
+            // btnTopluSil
+            // 
+            this.btnTopluSil.Location = new System.Drawing.Point(71, 119);
+            this.btnTopluSil.Name = "btnTopluSil";
+            this.btnTopluSil.Size = new System.Drawing.Size(136, 23);
+            this.btnTopluSil.TabIndex = 3;
+            this.btnTopluSil.Text = "Hisseleri Sil";
+            this.btnTopluSil.UseVisualStyleBackColor = true;
+            this.btnTopluSil.Click += new System.EventHandler(this.btnTopluSilme_Click);
             // 
             // HisseSenediIslemleri
             // 
@@ -306,9 +300,9 @@
             this.gbxTopluIslem.ResumeLayout(false);
             this.gbxTopluIslem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudYeniHisseYil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBloksilYil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudYeniHisseTertip)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBloksilTertip)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,18 +318,17 @@
         private System.Windows.Forms.DataGridView dgwHisseView;
         private System.Windows.Forms.GroupBox gbxTopluIslem;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudBloksilYil;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nudBloksilTertip;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnYeniHisseOlustur;
-        private System.Windows.Forms.Button btnTopleSilme;
         private System.Windows.Forms.Button btnBlokaj;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown nudYeniHisseYil;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nudYeniHisseTertip;
-        private System.Windows.Forms.Button btnHisseleriGetir;
+        private System.Windows.Forms.Button btnTopluSil;
     }
 }
