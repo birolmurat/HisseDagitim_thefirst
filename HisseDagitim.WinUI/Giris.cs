@@ -29,7 +29,7 @@ namespace HisseDagitim.WinUI
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if (_kullaniciService.GetKullanici(tbxKullaniciAdi.Text, tbxParola.Text)!=null)
+            if (_kullaniciService.GetKullanici(tbxKullaniciAdi.Text, tbxParola.Text)!=null&& _kullaniciService.GetKullanici(tbxKullaniciAdi.Text, tbxParola.Text).isGecerli)
             {
                 IslemlerSayfasi islemForm = new IslemlerSayfasi(_kullaniciService.GetKullanici(tbxKullaniciAdi.Text, tbxParola.Text), this);
                 islemForm.Show();
@@ -37,7 +37,7 @@ namespace HisseDagitim.WinUI
             }
             else
             {
-                MessageBox.Show("Yanlış Giriş");
+                MessageBox.Show("Yanlış Giriş Veya Deaktif Kullanıcı");
             }
             
         }

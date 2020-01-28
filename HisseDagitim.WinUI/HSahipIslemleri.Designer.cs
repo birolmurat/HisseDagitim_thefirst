@@ -318,6 +318,10 @@
             this.Controls.Add(this.dgwKisiHisse);
             this.Controls.Add(this.dgwHSahip);
             this.Controls.Add(this.grpbxArama);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(784, 760);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(784, 760);
             this.Name = "HSahipIslemleri";
             this.Text = "HSahipIslemleri";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HSahipIslemleri_FormClosing);

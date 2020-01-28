@@ -65,6 +65,7 @@
             this.btnKullaniciIslemleri.TabIndex = 0;
             this.btnKullaniciIslemleri.Text = "Kullanıcı İşlemleri";
             this.btnKullaniciIslemleri.UseVisualStyleBackColor = true;
+            this.btnKullaniciIslemleri.Click += new System.EventHandler(this.btnKullaniciIslemleri_Click);
             // 
             // btnIslemKaydi
             // 
@@ -75,6 +76,7 @@
             this.btnIslemKaydi.TabIndex = 0;
             this.btnIslemKaydi.Text = "İşlem Kaydı Görüntüle";
             this.btnIslemKaydi.UseVisualStyleBackColor = true;
+            this.btnIslemKaydi.Click += new System.EventHandler(this.btnIslemKaydi_Click);
             // 
             // IslemlerSayfasi
             // 
@@ -85,6 +87,10 @@
             this.Controls.Add(this.btnKullaniciIslemleri);
             this.Controls.Add(this.btnHSenetIslemleri);
             this.Controls.Add(this.btnHSahipIslemleri);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(460, 482);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(460, 482);
             this.Name = "IslemlerSayfasi";
             this.Text = "IslemlerSayfasi";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IslemlerSayfasi_FormClosing);

@@ -1,4 +1,5 @@
 ﻿using HisseDagitim.DAL.Contexts.EfContext;
+using HisseDagitim.Model.Enums;
 using HisseDagitim.Model.Somut;
 using System;
 using System.Collections.Generic;
@@ -125,8 +126,8 @@ namespace HisseDagitim.DAL.FakeData_Strategy
 
 			context.SaveChanges();
 
-			context.Kullanicilar.Add(new Kullanici { KullaniciAdi = "sa", Password = "123", });
-			context.Kullanicilar.Add(new Kullanici { KullaniciAdi = "sa2", Password = "246", });
+			context.Kullanicilar.Add(new Kullanici { KullaniciAdi = "sa", Password = "123", Role = Roles.admin , isGecerli = true});
+			context.Kullanicilar.Add(new Kullanici { KullaniciAdi = "sa2", Password = "246", Role = Roles.normal , isGecerli = true });
 
 			context.SaveChanges();
 

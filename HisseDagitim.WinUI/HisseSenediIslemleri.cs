@@ -46,6 +46,7 @@ namespace HisseDagitim.WinUI
 
         private void btnSenetAra_Click(object sender, EventArgs e)
         {
+            GetServiceInstances();
             dgwHisseView.DataSource = _hisseSenediService.GetAll().Where(p => p.HisseYili == (int)nudHisseYiliAra.Value && p.HisseTertipNo == (int)nudTertipNoAra.Value).ToList();
             nudBloksilTertip.Value = nudTertipNoAra.Value;
             nudBloksilYil.Value = nudHisseYiliAra.Value;
@@ -58,6 +59,7 @@ namespace HisseDagitim.WinUI
 
         private void dgwHisseView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            GetServiceInstances();
             HisseSenedi_Sahipten senetForm = new HisseSenedi_Sahipten(_kullanici, this, _hisseSenediService.Get(Convert.ToInt32(dgwHisseView.CurrentRow.Cells[0].Value.ToString())));
             senetForm.Show();
             this.Hide();
@@ -67,6 +69,7 @@ namespace HisseDagitim.WinUI
 
         private void btnBlokaj_Click(object sender, EventArgs e)
         {
+            GetServiceInstances();
             foreach (var item in _hisseSenediService.GetAll().Where(p => p.HisseYili == (int)nudHisseYiliAra.Value && p.HisseTertipNo == (int)nudTertipNoAra.Value).ToList())
             {
                 item.isGecerli = false;
@@ -78,14 +81,59 @@ namespace HisseDagitim.WinUI
 
         private void btnYeniHisseOlustur_Click(object sender, EventArgs e)
         {
-            foreach (var hsahip in _hisseSahibiService.GetAll())
+            GetServiceInstances();
+            try
             {
+                int seri = 1;
+                foreach (var hsahip in _hisseSahibiService.GetAll())
+                {
+                    _hisseSenediService.Add(new HisseSenedi
+                    {
+                        HisseDegeri = hsahip.ToplamHisseDegeri,
+                        HisseNo = seri,
+                        HisseTertipNo = (int)nudYeniHisseTertip.Value,
+                        HisseYili = (int)nudYeniHisseYil.Value,
+                        HisseSahibiID = hsahip.ID,
+                        isGecerli = true,
+                    });
+                    seri++;
+                }
+                MessageBox.Show("Hisseler Oluşturuldu");
 
+                foreach (var senet in _hisseSenediService.GetAll().Where(d => d.HisseYili == (int)nudYeniHisseYil.Value && d.HisseTertipNo == (int)nudYeniHisseTertip.Value).ToList())
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        _karPayiPuluService.Add(new KarPayiPulu
+                        {
+                            Carpan = 0m,
+                            HisseSenediID = senet.HisseSahibiID,
+                            isDagitildi = false,
+                            Yil = i + senet.HisseYili
+                        });
+                    }
+                    for (int j = 0; j < 15; j++)
+                    {
+                        _yeniPayPuluService.Add(new YeniPayPulu
+                        {
+                            Carpan = 0m,
+                            HisseSenediID = senet.ID,
+                            isDagitildi = false,
+                            PulNo = 1 + j
+                        });
+                    }
+                }
+                MessageBox.Show("Pullar Oluşturuldu");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Senetler Oluşturma Hatalı");
             }
         }
 
         private void btnTopluSilme_Click(object sender, EventArgs e)
         {
+            GetServiceInstances();
             try
             {
                 foreach (var item in _hisseSenediService.GetAll().Where(p => p.HisseYili == (int)nudHisseYiliAra.Value && p.HisseTertipNo == (int)nudTertipNoAra.Value).ToList())

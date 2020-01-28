@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\Roles.cs" />
     <Compile Include="Map\BaseMap.cs" />
     <Compile Include="Map\HisseSahibiMap.cs" />
     <Compile Include="Map\HisseSenediMap.cs" />

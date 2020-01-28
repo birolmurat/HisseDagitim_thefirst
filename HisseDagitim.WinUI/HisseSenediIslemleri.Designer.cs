@@ -39,6 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnYeniHisseOlustur = new System.Windows.Forms.Button();
+            this.btnTopluSil = new System.Windows.Forms.Button();
             this.btnBlokaj = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.nudYeniHisseTertip = new System.Windows.Forms.NumericUpDown();
             this.nudBloksilTertip = new System.Windows.Forms.NumericUpDown();
-            this.btnTopluSil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTertipNoAra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHisseYiliAra)).BeginInit();
@@ -184,6 +184,16 @@
             this.btnYeniHisseOlustur.UseVisualStyleBackColor = true;
             this.btnYeniHisseOlustur.Click += new System.EventHandler(this.btnYeniHisseOlustur_Click);
             // 
+            // btnTopluSil
+            // 
+            this.btnTopluSil.Location = new System.Drawing.Point(71, 119);
+            this.btnTopluSil.Name = "btnTopluSil";
+            this.btnTopluSil.Size = new System.Drawing.Size(136, 23);
+            this.btnTopluSil.TabIndex = 3;
+            this.btnTopluSil.Text = "Hisseleri Sil";
+            this.btnTopluSil.UseVisualStyleBackColor = true;
+            this.btnTopluSil.Click += new System.EventHandler(this.btnTopluSilme_Click);
+            // 
             // btnBlokaj
             // 
             this.btnBlokaj.Location = new System.Drawing.Point(71, 90);
@@ -270,16 +280,6 @@
             this.nudBloksilTertip.Size = new System.Drawing.Size(120, 20);
             this.nudBloksilTertip.TabIndex = 2;
             // 
-            // btnTopluSil
-            // 
-            this.btnTopluSil.Location = new System.Drawing.Point(71, 119);
-            this.btnTopluSil.Name = "btnTopluSil";
-            this.btnTopluSil.Size = new System.Drawing.Size(136, 23);
-            this.btnTopluSil.TabIndex = 3;
-            this.btnTopluSil.Text = "Hisseleri Sil";
-            this.btnTopluSil.UseVisualStyleBackColor = true;
-            this.btnTopluSil.Click += new System.EventHandler(this.btnTopluSilme_Click);
-            // 
             // HisseSenediIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +288,10 @@
             this.Controls.Add(this.gbxTopluIslem);
             this.Controls.Add(this.dgwHisseView);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 685);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(816, 685);
             this.Name = "HisseSenediIslemleri";
             this.Text = "HisseSenediIslemleri";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HisseSenediIslemleri_FormClosing);

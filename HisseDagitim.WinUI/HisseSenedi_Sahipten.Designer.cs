@@ -372,6 +372,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(972, 537);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(972, 537);
             this.Name = "HisseSenedi_Sahipten";
             this.Text = "HisseSenedi_Sahipten";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HisseSenedi_Sahipten_FormClosing);

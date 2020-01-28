@@ -164,6 +164,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nudHisseNo);
             this.Controls.Add(this.cbxBlokaj);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(270, 217);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(270, 217);
             this.Name = "KisiHisseOlustur";
             this.Text = "KisiHisseOlustur";
             this.Load += new System.EventHandler(this.KisiHisseOlustur_Load);

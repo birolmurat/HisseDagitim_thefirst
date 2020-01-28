@@ -12,6 +12,10 @@ namespace HisseDagitim.BLL.Soyut
         List<Kullanici> GetAll();
 
         Kullanici GetKullanici(string kAdi, string kPassword);
+
+        Kullanici GetKullaniciByName(string kAdi);
+
+        Kullanici GetKullaniciByID(int kID);
         
         void Add(Kullanici kullanici);
 
