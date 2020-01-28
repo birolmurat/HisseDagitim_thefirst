@@ -1,4 +1,4 @@
 
 PM> Enable-Migrations -ProjectName HisseDagitim.DAL -StartUpProjectName HisseDagitim.WinUI -Verbose
 
-PM> update-database -ProjectName HisseDagitim.DAL -StartUpProjectName HisseDagitim.WinUI -Verbose -force
+PM> update-database -ProjectName HisseDagitim.DAL -StartUpProjectName HisseDagitim.WinUI -Verbose -force 
